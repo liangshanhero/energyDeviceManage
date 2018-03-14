@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" 
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans      
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd        
+	http://www.springframework.org/schema/aop         
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd     
+	http://www.springframework.org/schema/tx      
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd        
+	http://www.springframework.org/schema/context      
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd        
+	http://www.springframework.org/schema/jee      
+	http://www.springframework.org/schema/jee/spring-jee-3.1.xsd         
+	http://www.springframework.org/schema/lang     
+	http://www.springframework.org/schema/lang/spring-lang-3.1.xsd     
+	http://www.springframework.org/schema/security      
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<!-- ******************************************************************** -->
+	<!-- Scan for dao layer annotated beans -->
+	<!-- ******************************************************************** -->
+	<context:component-scan base-package="cn.edu.scau.cmi.dao" scoped-proxy="interfaces" />
+	<context:component-scan base-package="cn.edu.scau.cmi.initBinder" scoped-proxy="interfaces" />
+
+	<!-- ******************************************************************** -->
+	<!-- Mark bean transactions as annotation driven -->
+	<!-- ******************************************************************** -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- ******************************************************************** -->
+	<!-- PropertyConfigurer for the DAO -->
+	<!-- ******************************************************************** -->
+	<context:property-placeholder
+		ignore-unresolvable="true" 
+		location="classpath:energyDeviceManage-dao.properties"/>
+	<!-- ******************************************************************** -->
+	<!-- Setup the transaction manager -->
+	<!-- ******************************************************************** -->
+	<!-- Using Atomikos Transaction Manager -->
+	<bean id="atomikosTransactionManager" class="com.atomikos.icatch.jta.UserTransactionManager"
+		init-method="init" destroy-method="close">
+		<property name="forceShutdown" value="true" />
+		<property name="startupTransactionService" value="true" />
+		<property name="transactionTimeout" value="60" />
+	</bean>
+
+	<bean id="atomikosUserTransaction" class="com.atomikos.icatch.jta.UserTransactionImp" />
+
+	<!-- Configure the Spring framework to use JTA transactions from Atomikos -->
+	<bean id="transactionManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager" ref="atomikosTransactionManager" />
+		<property name="userTransaction" ref="atomikosUserTransaction" />
+		<property name="transactionSynchronizationName" value="SYNCHRONIZATION_ON_ACTUAL_TRANSACTION" />
+	</bean>
+
+	<!-- ******************************************************************** -->
+	<!-- Setup a data source -->
+	<!-- ******************************************************************** -->
+
+	<!-- Using Apache DBCP Data Sources -->
+	<bean name="energydeviceDS" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${energydevice.connection.driver_class}" />
+		<property name="username" value="${energydevice.connection.username}" />
+		<property name="password" value="${energydevice.connection.password}" />
+		<property name="url" value="${energydevice.connection.url}" />
+		<property name="maxIdle" value="${energydevice.minPoolSize}" />
+		<property name="maxActive" value="${energydevice.maxPoolSize}" />
+	</bean>
+
+	<!-- ******************************************************************** -->
+	<!-- Setup each persistence unit -->
+	<!-- ******************************************************************** -->
+
+	<!-- Configure a JPA vendor adapter -->
+	<bean id="energydeviceJPAVendorAdapter"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<property name="showSql" value="${energydevice.show_sql}" />
+		<property name="generateDdl" value="${energydevice.generateDdl}" />
+		<property name="databasePlatform" value="${energydevice.dialect}" />
+	</bean>
+	<!-- EntityManager Factory that brings together the persistence unit, datasource, 
+		and JPA Vendor -->
+	<bean id="energydevice"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="energydeviceDS" />
+		<property name="persistenceUnitName" value="energydevice" />
+		<property name="jpaVendorAdapter" ref="energydeviceJPAVendorAdapter" />
+		<property name="jpaPropertyMap">
+			<map>
+				<entry key="hibernate.transaction.manager_lookup_class"
+					value="com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup" />
+				<entry key="hibernate.connection.release_mode" value="on_close" />
+			</map>
+		</property>
+	</bean>
+</beans>

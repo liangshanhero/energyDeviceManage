@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+	<persistence-unit name="energydevice" transaction-type="JTA">
+		<description>generated-persistence-unit</description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>cn.edu.scau.cmi.domain.Cac</class>
+		<class>cn.edu.scau.cmi.domain.Cacdevice</class>
+		<class>cn.edu.scau.cmi.domain.Cacdevicedata</class>
+		<class>cn.edu.scau.cmi.domain.Cacmalfunction</class>
+		<class>cn.edu.scau.cmi.domain.Cacrecordtime</class>
+		<class>cn.edu.scau.cmi.domain.Cacsensor</class>
+		<class>cn.edu.scau.cmi.domain.Cacsensordata</class>
+		<class>cn.edu.scau.cmi.domain.Company</class>
+		<class>cn.edu.scau.cmi.domain.Ledbuilding</class>
+		<class>cn.edu.scau.cmi.domain.Ledmeter</class>
+		<class>cn.edu.scau.cmi.domain.Ledmeterdata</class>
+		<class>cn.edu.scau.cmi.domain.Project</class>
+		<class>cn.edu.scau.cmi.domain.Staff</class>
+		<class>cn.edu.scau.cmi.domain.Whbuilding</class>
+		<class>cn.edu.scau.cmi.domain.Whdatatype</class>
+		<class>cn.edu.scau.cmi.domain.Whdatatype2whdevice</class>
+		<class>cn.edu.scau.cmi.domain.Whdevice</class>
+		<class>cn.edu.scau.cmi.domain.Whdevicedata</class>
+		<class>cn.edu.scau.cmi.domain.Whstrategy</class>
+		<class>cn.edu.scau.cmi.domain.Whstrategydetail</class>
+		<class>cn.edu.scau.cmi.domain.Whstrategytype</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+	</persistence-unit>
+</persistence>

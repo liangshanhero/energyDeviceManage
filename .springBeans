@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.8.2.me201612231634]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>cmi/energyDeviceManage-dao-context.xml</config>
+		<config>cmi/applicationContext.xml</config>
+		<config>cmi/energyDeviceManage-security-context.xml</config>
+		<config>cmi/energyDeviceManage-web-context.xml</config>
+		<config>cmi/energyDeviceManage-service-context.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

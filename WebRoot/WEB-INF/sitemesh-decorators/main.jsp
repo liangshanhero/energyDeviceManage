@@ -9,6 +9,7 @@
 		<style type="text/css" media="screen">
 			@import url("${pageContext.request.contextPath}/resources/dojo/resources/dojo.css");
 			@import url("${pageContext.request.contextPath}/resources/dijit/themes/tundra/tundra.css");
+			
 		</style>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/dojo/dojo.js" djconfig="parseOnLoad: true" ></script>
@@ -19,10 +20,12 @@
 		<link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet" type="text/css" /> 
 		<% if (((HttpServletRequest)pageContext.getRequest()).getServletPath().equals("/index.jsp")){ %>
 		<link href="${pageContext.request.contextPath}/css/dashboard.css" rel="stylesheet" type="text/css" /> 
-		<% } %>     
+		<% } %>
+		     
 		<% if (((HttpServletRequest)pageContext.getRequest()).getServletPath().equals("/pages/login.jsp")){ %>
 		<link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet" type="text/css" /> 
-		<% } %>		
+		<% } %>
+		<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />		
 		<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/favicon.gif" />
 		<decorator:head />
     </head>

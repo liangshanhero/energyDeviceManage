@@ -13,7 +13,7 @@ input[type="text"]:hover, input[type="password"]:hover {background-color:#ffffff
 /* end Dojo Specific overrides */
 #wrapper{padding:0px;}
 #header{border-bottom:1px solid #999;margin-bottom:10px;height:46px;width:100%;min-width:960px;
-	background: transparent url('../images/me4s_logo.jpg') right top no-repeat;}
+	}
 #header h1{padding-top:20px;*padding-top:10px;}
 #login{float:right;*margin-bottom:-26px;}
 #login a.button{margin-right:0;*margin-right:10px;}
@@ -31,11 +31,16 @@ input[type="text"]:hover, input[type="password"]:hover {background-color:#ffffff
 #rb{background-image:url(../images/r.gif);background-position: 100% 0%;background-repeat: repeat-y;}
 #lb{background-image:url(../images/l.gif);background-position: 0% 100%;background-repeat: repeat-y;}
 
-#content{margin-left:200px;padding:30px;}
+#content{margin-left:200px;padding:30px;
+			
+			}
 
-#content h1{margin-bottom:10px;margin-top:0px;clear:left;height:12px;}
+#content h1{display:none; margin-bottom:10px;margin-top:0px;clear:left;height:12px;}
 
-#tablewrapper{margin-top:10px;clear:left;height:250px;overflow:scroll;border:1px solid #828282;}
+#tablewrapper{margin-top:10px;clear:left;height:250px;overflow:scroll;border:1px solid #828282;
+		border-top-left-radius:3em;
+		border-bottom-right-radius:2em;
+			}
 
 /*===============手动添加的内容===========*/
 #showdataTablewrapper{margin-top:10px;clear:left;height:250px;overflow:scroll;border:1px solid #828282;}
@@ -48,11 +53,11 @@ input[type="text"]:hover, input[type="password"]:hover {background-color:#ffffff
 #listTable tbody tr td{padding:4px;border-right:1px solid #828282;}
 #listTable tbody tr td img{padding-right:2px;border:0px;}
 #listTable tbody tr:hover{background-color:#ccc;}
-#viewTable{clear:left;*margin-top:10px;margin-bottom:10px;*margin-bottom:6px;border:1px solid #828282;border-right:0;width:600px;border-radius:10px;box-show:0px 0px 5px #000}
-#viewTable tbody tr td{padding:4px;border-right:1px solid #828282;}
+#viewTable{clear:left;*margin-top:10px;margin-bottom:10px;*margin-bottom:6px;border-right:0;width:600px;border-radius:10px;box-show:0px 0px 5px #000}
+#viewTable tbody tr td{padding:4px;}
 #viewTable tbody tr td img{padding-right:2px;border:0px;}
 #viewTable tbody tr:hover{background-color:#ccc;}
-.tabletd{padding:4px;border-right:1px solid #828282;}
+.tabletd{padding:4px;}
 #footer{clear:both;}
 .footer{margin-top:10px;float:right;color:#828282;}
 .footer a{color:#828282;}
@@ -105,7 +110,7 @@ a.button span:hover{background: transparent url('../images/button_span_hover.gif
 .clear {clear:both;height:0px;margin:0px;}
 #content .navitem{margin:0;}
 
-.thead{background:url(../images/thbg.gif) repeat-x;padding-left:4px;padding-right:4px;
+.thead{padding-left:4px;padding-right:4px;
 	border-right:1px solid #828282;border-bottom:1px solid #828282;height:19px;}
 .welcome{float:right;margin:4px 10px 0 0;}
 .right{float:right;}
@@ -131,8 +136,47 @@ body {
 	background-repeat: no-repea;
 	background-size: cover;
 	background-attachment: fixed;
-	background-color: #DDD;；
+	background-color:#CAE1FF;
+	background:url(zhongbeijing.jpg);
+	
 }
+		#listTable{
+			border:0;
+		}
+		
+		/* Table Head */
+		#listTable  th {
+		background-color: rgb(123, 136, 230);
+		color: #fff;
+		border-bottom-width: 0;
+		}
+		
+		/* Column Style */
+		#listTable td {
+		color: #000;
+		}
+		/* Heading and Column Style */
+		#listTable tr, #listTable th {
+		border-width: 1px;
+		border-style: solid;
+		border-color: rgb(123, 136, 230);
+		}
+		
+		/* Padding and font style */
+		#listTable td, #listTable th {
+		padding: 5px 10px;
+		font-size: 12px;
+		font-family: Verdana;
+		font-weight: bold;
+		}
+		
+		.div2:hover{background:#C4E3F3;border:1px solid #1E90FF;border-radius:15px;}
+		.div3 li:hover{background:#C4E3F3;border:2px solid #80ff80;border-radius:15px;}
+		#tablewrapper{
+			height:500px;
+		}
+		#viewTable{
+		}
 .top1{
 	position: absolute;
 	top: 0px;
@@ -143,7 +187,7 @@ body {
 	font-size: 17px;
 	font-height: 20px;
 	font-family: 楷体;
-	background-color:#003399
+	background-color:rgb(123, 136, 230);
 	
 }
 .top2{
@@ -153,8 +197,8 @@ body {
 	height: 77px;
 	text-align: center;
 	color: #ccffff;
-	background-color: #003399
-	
+	background-color: rgb(123, 136, 230);
+	border-bottom-right-radius:2em;
 }
 .title {
 float:left;
@@ -171,12 +215,13 @@ float:left;
 	left: 0px;
 	top: 97px;
 	width: 200px;
-	height: 85%;
+	height: 88.5%;
 	border-right: 1px solid #9370DB;
 	color: #000000;
 	font-size: 20px;
 	text-align: center;
-	background-color:#A0A0A0
+	background-color:rgba(213, 226, 104, 0.28);
+	border-bottom-right-radius:3em;
 }
 .mainPart{
 	margin-left:200px;

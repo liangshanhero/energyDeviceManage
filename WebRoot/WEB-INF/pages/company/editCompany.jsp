@@ -17,7 +17,7 @@
 			<table cellpadding="0" cellspacing="0" id="viewTable">
 				<tbody>
 					<tr>
-						<%-- <td class="label" valign="top"><fmt:message
+						<%-- <td class="label2" valign="top"><fmt:message
 								key="company.id.title" />:</td>
  --%>						
                            <td><c:choose>
@@ -31,61 +31,61 @@
 							</c:choose></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.name.title" />:</td>
 						<td><form:input id="company_name" path="name"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.phone.title" />:</td>
 						<td><form:input id="company_phone" path="phone"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.fax.title" />:</td>
 						<td><form:input id="company_fax" path="fax"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.postcode.title" />:</td>
 						<td><form:input id="company_postcode" path="postcode"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.address.title" />:</td>
 						<td><form:input id="company_address" path="address"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.website.title" />:</td>
 						<td><form:input id="company_website" path="website"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.personduty.title" />:</td>
 						<td><form:input id="company_personduty" path="personduty"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.detail.title" />:</td>
 						<td><form:input id="company_detail" path="detail"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message
+						<td class="label2" valign="top"><fmt:message
 								key="company.remark.title" />:</td>
 						<td><form:input id="company_remark" path="remark"
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label" valign="top"><fmt:message key="staff.title" />:</td>
+						<td class="label2" valign="top"><fmt:message key="staff.title" />:</td>
 						<td><form:select id="relativeStaff" name="relativeStaff"
 								path="relativeStaff" cssStyle="width:300px;">
 								<option></option>

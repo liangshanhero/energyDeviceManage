@@ -2240,7 +2240,7 @@ pre code {
 }
 
 .container {
-	background-color: #808080;
+
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
@@ -8057,6 +8057,7 @@ h2 {
 
 .templatemo-bg-gray h1 {
 	color: rgb(74, 164, 180);
+	font-size:60px;
 }
 
 .templatemo-bg-image-1 {
@@ -8466,6 +8467,21 @@ h2 {
 		margin-left: 30px;
 	}
 }
+	.newclass{
+		height:850px;
+
+	}
+	.newpic{
+			background:url(index.jpg) ;
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		z-index:2;
+	}
+	.newform{
+		position:relative;
+		top:150px;
+		
+	}
 </style>
 
 
@@ -8490,15 +8506,15 @@ h2 {
 </HEAD>
 
 <body>
-	<div class="templatemo-bg-gray">
+	<div class="templatemo-bg-gray newpic">
 
 		<div class="container">
 
-			<div class="col-md-12">
+			<div class="col-md-12 newclass">
 
 				<h1 class="margin-bottom-15">能源设备管理系统</h1>
 				<form
-					class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30"
+					class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30 newform"
 					role="form" action="${pageContext.request.contextPath}/login"
 					method="post" style="height: 324px; ">
 					<div class="form-group">
@@ -8527,7 +8543,7 @@ h2 {
 						<div class="col-md-12">
 							<div class="control-wrapper">
 							
-								<input type="submit" value="Login" onclick="return check();" />
+								<input type="submit" value="登陆" onclick="return check();" />
 								
 							</div>
 						</div>

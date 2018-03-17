@@ -17,7 +17,7 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<%-- <tr>			
-					<td class="label" valign="top"><fmt:message key="project.id.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.id.title" />:</td>
 					
 		 
 					<td>
@@ -33,43 +33,43 @@
 					</td>
 				</tr> --%>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.name.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.name.title" />:</td>
 					<td><form:input id="project_name" path="name" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.type.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.type.title" />:</td>
 					<td><form:input id="project_type" path="type" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.status.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.status.title" />:</td>
 					<td><form:input id="project_status" path="status" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.province.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.province.title" />:</td>
 					<td><form:input id="project_province" path="province" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.city.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.city.title" />:</td>
 					<td><form:input id="project_city" path="city" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.area.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.area.title" />:</td>
 					<td><form:input id="project_area" path="area" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.address.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.address.title" />:</td>
 					<td><form:input id="project_address" path="address" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.detail.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.detail.title" />:</td>
 					<td><form:input id="project_detail" path="detail" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.remark.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="project.remark.title" />:</td>
 					<td><form:input id="project_remark" path="remark" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="company.title" />:</td>
 					<td>
 						<form:select id="relativeCompany" name="company" path="company" cssStyle="width:300px;">
 						<option></option>
@@ -80,7 +80,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.title" />:</td>
 					<td>
 						<form:select id="relativeStaff" name="staff" path="staff" cssStyle="width:300px;">
 						<option></option>

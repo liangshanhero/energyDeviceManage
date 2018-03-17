@@ -10,7 +10,7 @@
 	<div id="content">
 		<div>
 			<div id="tablewrapper">
-				<table id="listTable" cellpadding="0" cellspacing="0">
+				<table  id="listTable" cellpadding="0" cellspacing="0">
 					<thead>
 						<tr>
 							<th class="thead">&nbsp;</th>

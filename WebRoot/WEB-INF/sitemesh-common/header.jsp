@@ -29,7 +29,12 @@
 	<!-- 菜单 -->
 	<div class="left">
 	<!-- 用户管理菜单 -->
-		<div class="div1"><div class="div2"><div class="spgl"></div>用户管理</div><div class="div3">
+		<div class="div1">
+			<div class="div2">
+				<div class="spgl"></div>
+					用户管理
+			</div>
+			<div class="div3">
 				<ul>
 					<li><a class="a1" href="${pageContext.request.contextPath}/listAllStaffs">查看用户</a></li>
 					<li><a class="a1" href="${pageContext.request.contextPath}/newStaff">添加用户</a></li>

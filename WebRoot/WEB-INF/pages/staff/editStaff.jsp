@@ -13,7 +13,7 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<%-- <tr>
-					<td class="label" valign="top"><fmt:message key="staff.id.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.id.title" />:</td>
 					<td>
 						<c:choose>
 						<c:when test='${newFlag}'>

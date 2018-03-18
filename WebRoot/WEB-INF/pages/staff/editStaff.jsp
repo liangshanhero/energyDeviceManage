@@ -30,43 +30,43 @@
 				  
 				    <!--valign="top"> 表示垂直对齐 -->
 				
-					<td class="label" valign="top"><fmt:message key="staff.name.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.name.title" />:</td>
 					<td><form:input id="staff_name" path="name" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.duty.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.duty.title" />:</td>
 					<td><form:input id="staff_duty" path="duty" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.token.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.token.title" />:</td>
 					<td><form:input id="staff_token" path="token" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.type.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.type.title" />:</td>
 					<td><form:input id="staff_type" path="type" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.status.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.status.title" />:</td>
 					<td><form:input id="staff_status" path="status" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.level.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.level.title" />:</td>
 					<td><form:input id="staff_level" path="level" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.loginname.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.loginname.title" />:</td>
 					<td><form:input id="staff_loginname" path="loginname" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.password.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.password.title" />:</td>
 					<td><form:input id="staff_password" path="password" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.remark.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.remark.title" />:</td>
 					<td><form:input id="staff_remark" path="remark" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.title" />:</td>
+					<td class="label2" valign="top"><fmt:message key="company.title" />:</td>
 					<td>
 						<form:select id="relativeCompany" name="relativeCompany" path="relativeCompany" cssStyle="width:300px;">
 						<option></option>

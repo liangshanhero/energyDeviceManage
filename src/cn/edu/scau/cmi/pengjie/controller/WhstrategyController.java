@@ -328,6 +328,7 @@ public class WhstrategyController {
 			return "{\"result\":\"null\"}";
 		}
 		whstrategy.setEnable(strategy.getEnable());
+		whstrategy.setCreateDate(new Date());
 		whstrategyDAO.merge(whstrategy);
 		
 		for (StrategyDetail detail : strategy.getDetails()) {

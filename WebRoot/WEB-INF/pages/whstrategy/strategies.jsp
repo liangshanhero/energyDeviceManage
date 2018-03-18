@@ -9,7 +9,11 @@
 <script type="text/javascript" src="js/vue.js"></script>
 
 <title>Strategies</title>
-
+<style>
+.input-time {
+	width: 4em;
+}
+</style>
 </head>
 
 <body>
@@ -100,6 +104,8 @@
 						<select id="strategyType" v-model="selectType">
 							<option v-for="(type, index) in strategyTypes" :value="index">{{type.name}}</option>
 						</select>
+						<label>编号</label>
+						<input v-model="strategyNumber" placeholder="编号" maxlength="2" style="width: 3em;">
 						<div>
 							<label>是否生效</label>
 							&nbsp;
@@ -109,7 +115,7 @@
 							否
 						</div>
 						<form id="createStrategyForm">
-							<input id="name" name="name" type="hidden" :value="strategyTypes[selectType].name">
+							<input id="name" name="name" type="hidden" :value="strategyTypes[selectType].name + strategyNumber" readonly>
 							<div v-for="strategy in strategyTypes" v-if="selectType == strategyTypes.indexOf(strategy)">
 								<div class="form-group" v-for="(param, index) in strategy.params">
 									<div v-if="param == '时间'">
@@ -118,15 +124,15 @@
 										<input :name="'details[' + index + '].type'" :value="param" type="hidden">
 										<label>起始时间</label>
 										<input :name="'details[' + index + '].min'" v-model="startTime" type="hidden">
-										<input v-model="startHour" maxlength="2">
+										<input v-model="startHour" maxlength="2" placeholder="0~23" class="input-time">
 										:
-										<input v-model="startMinute" maxlength="2">
+										<input v-model="startMinute" maxlength="2" placeholder="0~59" class="input-time">
 										<br>
 										<label>结束时间</label>
 										<input :name="'details[' + index + '].max'" v-model="endTime" type="hidden">
-										<input v-model="endHour" maxlength="2">
+										<input v-model="endHour" maxlength="2" class="input-time">
 										:
-										<input v-model="endMinute" maxlength="2">
+										<input v-model="endMinute" maxlength="2" class="input-time">
 									</div>
 									<div v-else>
 										<label>{{param}}</label>
@@ -179,16 +185,16 @@
 									<br>
 									<input :name="'details[' + index + '].type'" :value="detail.type" type="hidden">
 									<label>起始时间</label>
-									<input :name="'details[' + index + '].min'" :value="detail.min" type="hidden">
-									<input v-model="startHour" maxlength="2">
+									<input :name="'details[' + index + '].min'" v-model="startTime" type="hidden">
+									<input v-model="startHour" maxlength="2" class="input-time">
 									:
-									<input v-model="startMinute" maxlength="2">
+									<input v-model="startMinute" maxlength="2" class="input-time">
 									<br>
 									<label>结束时间</label>
-									<input :name="'details[' + index + '].max'" :value="detail.max" type="hidden">
-									<input v-model="endHour" maxlength="2">
+									<input :name="'details[' + index + '].max'" v-model="endTime" type="hidden">
+									<input v-model="endHour" maxlength="2" class="input-time">
 									:
-									<input v-model="endMinute" maxlength="2">
+									<input v-model="endMinute" maxlength="2" class="input-time">
 								</div>
 
 								<div v-else>
@@ -294,7 +300,7 @@
 						]
 					},
 				],
-	
+				strategyNumber : 1,
 				selectType : 0,
 				startTime : 0,
 				endTime : 0,
@@ -325,7 +331,21 @@
 						function(data) {
 							console.log(JSON.stringify(data))
 							vm.toUpdate = data
-						})
+							details = data.strategyDetails
+							console.log('Looking for Time')
+							for (i in details) {
+								console.log('type: ' + details[i].type)
+								if (details[i].type == '时间') {
+									console.log('Contains Time')
+									console.log(JSON.stringify(details[i]))
+									vm.startHour = Math.floor(parseInt(details[i].min) / 60)
+									vm.startMinute = Math.floor(parseInt(details[i].min) % 60)
+									vm.endHour = Math.floor(parseInt(details[i].max) / 60)
+									vm.endMinute = Math.floor(parseInt(details[i].max) % 60)
+						}
+					}
+						}
+					)
 				},
 				postStrategy : function() {
 	

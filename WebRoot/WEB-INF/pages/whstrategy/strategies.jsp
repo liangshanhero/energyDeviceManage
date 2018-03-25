@@ -32,13 +32,13 @@
 					<option v-for="project in projects" :value="project.id">{{project.name}}</option>
 				</select>
 				&nbsp;
-				<label for="selectBuilding">建筑</label>
+				<label for="selectBuilding">区域</label>
 				<select id="selectBuilding" v-model="selectBuilding">
 					<option disabled value="">选择建筑</option>
 					<option v-for="building in buildings" :value="building.id">{{building.name}}</option>
 				</select>
 				&nbsp;
-				<label for="selectDevice">设备</label>
+				<label for="selectDevice">站点</label>
 				<select id="selectDevice" v-model="selectDevice">
 					<option disabled value="">选择设备</option>
 					<option v-for="device in devices" :value="device.id">{{device.number}}</option>
@@ -109,7 +109,7 @@
 						<div>
 							<label>是否生效</label>
 							&nbsp;
-							<input type="radio" name="postEnable" value="true">
+							<input type="radio" name="postEnable" value="true" checked>
 							是 &nbsp;&nbsp;
 							<input type="radio" name="postEnable" value="false">
 							否
@@ -171,9 +171,11 @@
 					<div class="modal-body">
 						<div>
 							<label>是否生效</label>
-							<input type="radio" name="updateEnable" value="true">
+							<input type="radio" name="updateEnable" value="true" v-if="toUpdate.enable" checked>
+							<input type="radio" name="updateEnable" value="true" v-else>
 							是
-							<input type="radio" name="updateEnable" value="false">
+							<input type="radio" name="updateEnable" value="false" v-if="toUpdate.enable">
+							<input type="radio" name="updateEnable" value="false" v-else checked>
 							否
 						</div>
 						<form id="updateStrategyForm">
@@ -342,8 +344,8 @@
 									vm.startMinute = Math.floor(parseInt(details[i].min) % 60)
 									vm.endHour = Math.floor(parseInt(details[i].max) / 60)
 									vm.endMinute = Math.floor(parseInt(details[i].max) % 60)
-						}
-					}
+								}
+							}
 						}
 					)
 				},

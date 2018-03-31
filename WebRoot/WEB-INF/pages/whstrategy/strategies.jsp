@@ -51,8 +51,9 @@
 					<span id="deviceNumber">{{current.device.number}}</span>
 				</div>
 				<div>
-					<!-- Button trigger modal -->
+					<!-- Button trigger modal
 					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newStrategy">新建策略</button>
+ -->
 				</div>
 			</div>
 			<div>
@@ -74,15 +75,15 @@
 						<tbody>
 							<tr v-for="detail in strategy.strategyDetails">
 								<td>{{detail.type}}</td>
-								<td v-if="detail.type == '时间'">{{Math.floor(detail.min / 60)}}:{{detail.min % 60}}</td>
+								<td v-if="detail.type == '时间'">{{Math.floor(detail.min / 60)}}:{{detail.min % 60 > 9 ? '' : '0'}}{{detail.min % 60}}</td>
 								<td v-else>{{detail.min}}</td>
-								<td v-if="detail.type == '时间'">{{Math.floor(detail.max / 60)}}:{{detail.max % 60}}</td>
+								<td v-if="detail.type == '时间'">{{Math.floor(detail.max / 60)}}:{{detail.max % 60 > 9 ? '' : '0'}}{{detail.max % 60}}</td>
 								<td v-else>{{detail.max}}</td>
 								<td>{{new Date(detail.time.time).toLocaleString()}}</td>
 							</tr>
 						</tbody>
 						<button class="btn btn-primary" @click="queryStrategy(strategy.id)" data-toggle="modal" data-target="#updateStrategy">修改策略</button>
-						<button class="btn btn-primary" @click="deleteStrategy(strategy.id)">删除策略</button>
+						<!--  <button class="btn btn-primary" @click="deleteStrategy(strategy.id)">删除策略</button>-->
 					</table>
 				</div>
 			</div>
@@ -478,17 +479,61 @@
 				selectDevice : function() {
 					this.loadStrategy()
 				},
-				startHour : function() {
-					this.timeToMinute()
+				startHour : function(newValue, oldValue) {
+					newValue = parseInt(newValue)
+					oldValue = parseInt(oldValue)
+					if (newValue < 0 || newValue > 23) {
+						this.startHour = oldValue
+						alert('时间输入有误')
+					}
+					else if (newValue > this.endHour) {
+						this.startHour = oldValue
+						alert('起始时间不可大于结束时间')
+					} else {
+						this.timeToMinute()
+					}
 				},
-				startMinute : function() {
-					this.timeToMinute()
+				startMinute : function(newValue, oldValue) {
+					newValue = parseInt(newValue)
+					oldValue = parseInt(oldValue)
+					if (newValue < 0 || newValue > 59) {
+						this.startMinute = oldValue
+						alert('时间输入有误')
+					}
+					else if (this.startHour == this.endHour && newValue > this.endMinute) {
+						this.startMinute = oldValue
+						alert('起始时间不可大于结束时间')
+					} else {
+						this.timeToMinute()
+					}
 				},
-				endHour : function() {
-					this.timeToMinute()
+				endHour : function(newValue, oldValue) {
+					newValue = parseInt(newValue)
+					oldValue = parseInt(oldValue)
+					if (newValue < 0 || newValue > 23) {
+						this.endHour = oldValue
+						alert('时间输入有误')
+					}
+					else if (newValue < this.startHour) {
+						this.endHour = oldValue
+						alert('结束时间不可小于起始时间')
+					} else {
+						this.timeToMinute()
+					}
 				},
-				endMinute : function() {
-					this.timeToMinute()
+				endMinute : function(newValue, oldValue) {
+					newValue = parseInt(newValue)
+					oldValue = parseInt(oldValue)
+					if (newValue < 0 || newValue > 59) {
+						this.endMinute = oldValue
+						alert('时间输入有误')
+					}
+					else if (this.startHour == this.endHour && newValue < this.startMinute) {
+						this.endMinute = oldValue
+						alert('结束时间不可小于起始时间')
+					} else {
+						this.timeToMinute()
+					}
 				},
 
 			},

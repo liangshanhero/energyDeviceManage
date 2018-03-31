@@ -134,10 +134,25 @@
 			</tr>
 		</tbody>
 		</table>
-		<span class="inputbutton"><input class="savebutton" id="save" type="submit" value="<fmt:message key="navigation.save"/>" /></span>
+		<span style="display:none" class="inputbutton"><input class="savebutton"  id="save" type="submit" value="<fmt:message key="navigation.save"/>" /></span>
 		<script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId : 'save',event : 'onclick'}));</script>
 		</form:form>
+		<span class="inputbutton"><input class="savebutton" id="newsave" type="submit" value="<fmt:message key="navigation.save"/>" /></span>
 		<div class="clear">&nbsp;</div>
 	</div>
+		<script type="text/javascript">
+
+		var save=document.getElementById("save");
+		var newsave=document.getElementById("newsave");
+		newsave.onclick=function()
+		{
+			var Company=$("#relativeCompany").val();			
+			if(Company.trim()=="")
+			alert("公司不能为空!");
+			else
+			$("#save").click();
+		}
+	
+</script>
 </body>
 </html>

@@ -12,43 +12,43 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.id.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.id.title"/>:</td>
 					<td>${project.id}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.name.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.name.title"/>:</td>
 					<td>${project.name}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.type.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.type.title"/>:</td>
 					<td>${project.type}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.status.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.status.title"/>:</td>
 					<td>${project.status}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.province.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.province.title"/>:</td>
 					<td>${project.province}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.city.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.city.title"/>:</td>
 					<td>${project.city}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.area.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.area.title"/>:</td>
 					<td>${project.area}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.address.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.address.title"/>:</td>
 					<td>${project.address}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.detail.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.detail.title"/>:</td>
 					<td>${project.detail}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="project.remark.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="project.remark.title"/>:</td>
 					<td>${project.remark}&nbsp;</td>
 				</tr>
 			</tbody>

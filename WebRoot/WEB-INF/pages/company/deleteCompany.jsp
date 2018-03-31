@@ -14,43 +14,43 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.id.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.id.title"/>:</td>
 					<td>${company.id}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.name.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.name.title"/>:</td>
 					<td>${company.name}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.phone.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.phone.title"/>:</td>
 					<td>${company.phone}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.fax.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.fax.title"/>:</td>
 					<td>${company.fax}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.postcode.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.postcode.title"/>:</td>
 					<td>${company.postcode}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.address.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.address.title"/>:</td>
 					<td>${company.address}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.website.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.website.title"/>:</td>
 					<td>${company.website}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.personduty.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.personduty.title"/>:</td>
 					<td>${company.personduty}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.detail.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.detail.title"/>:</td>
 					<td>${company.detail}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="company.remark.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="company.remark.title"/>:</td>
 					<td>${company.remark}&nbsp;</td>
 				</tr>
 			</tbody>

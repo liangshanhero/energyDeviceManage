@@ -12,11 +12,11 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="whbuilding.id.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="whbuilding.id.title"/>:</td>
 					<td>${whbuilding.id}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="whbuilding.name.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="whbuilding.name.title"/>:</td>
 					<td>${whbuilding.name}&nbsp;</td>
 				</tr>
 			</tbody>

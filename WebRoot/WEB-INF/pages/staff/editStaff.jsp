@@ -59,7 +59,7 @@
 				</tr>
 				<tr>
 					<td class="label2" valign="top"><fmt:message key="staff.password.title" />:</td>
-					<td><form:input id="staff_password" path="password" cssStyle="width:300px;" /></td>
+					<td><form:input id="staff_password" path="password" type="password" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
 					<td class="label2" valign="top"><fmt:message key="staff.remark.title" />:</td>

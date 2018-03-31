@@ -70,43 +70,43 @@
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.id.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.id.title"/>:</td>
 					<td>${staff.id}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.name.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.name.title"/>:</td>
 					<td>${staff.name}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.duty.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.duty.title"/>:</td>
 					<td>${staff.duty}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.token.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.token.title"/>:</td>
 					<td>${staff.token}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.type.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.type.title"/>:</td>
 					<td>${staff.type}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.status.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.status.title"/>:</td>
 					<td>${staff.status}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.level.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.level.title"/>:</td>
 					<td>${staff.level}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.loginname.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.loginname.title"/>:</td>
 					<td>${staff.loginname}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.password.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.password.title"/>:</td>
 					<td>${staff.password}&nbsp;</td>
 				</tr>
 				<tr>
-					<td class="label" valign="top"><fmt:message key="staff.remark.title"/>:</td>
+					<td class="label2" valign="top"><fmt:message key="staff.remark.title"/>:</td>
 					<td>${staff.remark}&nbsp;</td>
 				</tr>
 			</tbody>

@@ -115,7 +115,7 @@
 				</ul>
 			</div>
 
-			<a class="a1" href="login.html"><div class="div2">
+			<a class="a1" href="${pageContext.request.contextPath}/logout"><div class="div2">
 					<div class="spgl"></div>
 					退出后台
 				</div> </a>

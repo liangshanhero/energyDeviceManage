@@ -38,7 +38,7 @@ public class LoginController {
 	 * 
 	 * **/
 	@SuppressWarnings("null")
-	@RequestMapping(value = "/login")
+//	@RequestMapping(value = "/login")
 	public String login(HttpServletRequest req, HttpServletResponse res) {
 		// 获取登陆的用户名
 		System.out.println("到达这");

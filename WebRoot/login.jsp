@@ -8513,9 +8513,10 @@ h2 {
 			<div class="col-md-12 newclass">
 
 				<h1 class="margin-bottom-15">能源设备管理系统</h1>
+				${sessionScope.SPRING_SECURITY_LAST_EXCEPTION.message }
 				<form
 					class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30 newform"
-					role="form" action="${pageContext.request.contextPath}/login"
+					role="form" action="${pageContext.request.contextPath}/j_spring_security_check"
 					method="post" style="height: 324px; ">
 					<div class="form-group">
 						<div class="col-xs-12">
@@ -8523,7 +8524,7 @@ h2 {
 								<span style="font-size:18px;color: #4AA4B4"">用户名：</span><label
 									for="username" class="control-label fa-label"><i
 									class="fa fa-user fa-medium"></i></label> <input type="text"
-									class="form-control" name="username" id="username"
+									class="form-control" name="j_username" id="username"
 									placeholder="Username"/>
 							</div>
 						</div>
@@ -8534,7 +8535,7 @@ h2 {
 								<span style="font-size:18px;color: #4AA4B4"">密码：</span><label
 									for="password" class="control-label fa-label"><i
 									class="fa fa-lock fa-medium"></i></label> <input type="password"
-									class="form-control" name="password" id="password"
+									class="form-control" name="j_password" id="password"
 									placeholder="Password" />
 							</div>
 						</div>

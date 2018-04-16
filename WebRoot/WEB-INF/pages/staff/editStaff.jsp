@@ -12,7 +12,7 @@
 		<form:form action="${pageContext.request.contextPath}/saveStaff" method="POST" modelAttribute="staff">
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
-				<%-- <tr>
+				<tr>
 					<td class="label2" valign="top"><fmt:message key="staff.id.title" />:</td>
 					<td>
 						<c:choose>
@@ -25,7 +25,7 @@
 						</c:otherwise>
 						</c:choose>
 					</td>
-				</tr> --%>
+				</tr>
 				<tr>
 				  
 				    <!--valign="top"> 表示垂直对齐 -->

@@ -15,7 +15,12 @@
 
 	<security:http pattern="/login*" security="none"/>
 	<security:http pattern="/*.jpg" security="none"/>
+	<security:http pattern="/images/*.gif" security="none"/>
+	<security:http pattern="/*.gif" security="none"/>
 	<security:http pattern="/resources/**" security="none"/>
+	<security:http pattern="/**/*.css" security="none"/>
+	<security:http pattern="/**/*.jpg" security="none"/>
+	<security:http pattern="/**/*.js" security="none"/>
 	<security:http auto-config="true">
 		<security:intercept-url pattern="/**"
 			access="ROLE_USER" />

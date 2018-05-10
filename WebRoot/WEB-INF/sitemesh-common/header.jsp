@@ -72,7 +72,7 @@
 				</ul>
 			</div>
 
-			<div class="div2">
+<%-- 			<div class="div2">
 				<div class="spgl"></div>
 				设备管理
 			</div>
@@ -83,7 +83,12 @@
 						href="${pageContext.request.contextPath}/whdevice">设备</a></li>
 				</ul>
 			</div>
-
+			 --%>
+			
+			<div class="div2">
+				<div class="spgl"></div>
+				数据管理
+			</div>
 			<div class="div3">
 				<ul>
 					<li><a class="a"
@@ -95,12 +100,12 @@
 
 			<div class="div2">
 				<div class="spgl"></div>
-				设备策略
+				热水策略
 			</div>
 			<div class="div3">
 				<ul>
 					<li><a class="a"
-						href="${pageContext.request.contextPath}/whstrategy">策略</a></li>
+						href="${pageContext.request.contextPath}/whstrategy">策略详细</a></li>
 				</ul>
 			</div>
 			

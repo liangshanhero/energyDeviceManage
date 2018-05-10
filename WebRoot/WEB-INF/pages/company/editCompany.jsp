@@ -85,7 +85,7 @@
 								cssStyle="width:300px;" /></td>
 					</tr>
 					<tr>
-						<td class="label2" valign="top"><fmt:message key="staff.title" />:</td>
+						<td class="label2" valign="top"><%-- <fmt:message key="staff.title" /> --%>法人:</td>
 						<td><form:select id="relativeStaff" name="relativeStaff"
 								path="relativeStaff" cssStyle="width:300px;">
 								<option></option>

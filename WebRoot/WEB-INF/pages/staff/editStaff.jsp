@@ -34,8 +34,12 @@
 					<td><form:input id="staff_name" path="name" cssStyle="width:300px;" /></td>
 				</tr>
 				<tr>
-					<td class="label2" valign="top"><fmt:message key="staff.duty.title" />:</td>
-					<td><form:input id="staff_duty" path="duty" cssStyle="width:300px;" /></td>
+					<td class="label2" valign="top"><%-- <fmt:message key="staff.duty.title" /> --%>权限:</td>
+					<td><%-- <form:input id="staff_duty" path="duty" cssStyle="width:300px;" /> --%>
+						<select name="duty">
+							<option value="ROLE_USER">系统管理员</option>
+						</select>
+					</td>
 				</tr>
 				<tr>
 					<td class="label2" valign="top"><fmt:message key="staff.token.title" />:</td>

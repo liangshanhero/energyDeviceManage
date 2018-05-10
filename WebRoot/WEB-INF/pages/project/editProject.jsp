@@ -16,7 +16,7 @@
 		<form:form action="${pageContext.request.contextPath}/saveProject" method="POST" modelAttribute="project">
 		<table cellpadding="0" cellspacing="0" id="viewTable">
 		<tbody>
-				<%-- <tr>			
+				<tr>			
 					<td class="label2" valign="top"><fmt:message key="project.id.title" />:</td>
 					
 		 
@@ -31,7 +31,7 @@
 						</c:otherwise>
 						</c:choose>
 					</td>
-				</tr> --%>
+				</tr>
 				<tr>
 					<td class="label2" valign="top"><fmt:message key="project.name.title" />:</td>
 					<td><form:input id="project_name" path="name" cssStyle="width:300px;" /></td>
@@ -80,7 +80,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="label2" valign="top"><fmt:message key="staff.title" />:</td>
+					<td class="label2" valign="top"><%-- <fmt:message key="staff.title" /> --%>负责人:</td>
 					<td>
 						<form:select id="relativeStaff" name="staff" path="staff" cssStyle="width:300px;">
 						<option></option>

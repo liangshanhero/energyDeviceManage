@@ -67,8 +67,8 @@ import cn.edu.scau.cmi.service.CacsensorService;
 import cn.edu.scau.cmi.service.CacsensordataService;
 import cn.edu.scau.cmi.service.WhbuildingServiceImpl;
 
-@Controller("writeDataIntoDBController")
-public class writeDataIntoDBController {
+@Controller("DataConvertController")
+public class DataConvertController {
 
 	@Autowired
 	private ProjectDAO projectdao;

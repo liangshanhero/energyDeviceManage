@@ -73,6 +73,8 @@
 		<property name="url" value="${energydevice.connection.url}" />
 		<property name="maxIdle" value="${energydevice.minPoolSize}" />
 		<property name="maxActive" value="${energydevice.maxPoolSize}" />
+		<property name="validationQuery" value="SELECT 1" />
+    	<property name="testOnBorrow" value="true"/>
 	</bean>
 
 	<!-- ******************************************************************** -->

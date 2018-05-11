@@ -38,15 +38,14 @@ public class FileController {
 
 	// 使用方法二上传文件
 	@RequestMapping("/fileUpload")
-	public String fileUpload(@RequestParam("file") CommonsMultipartFile file,
-			HttpServletRequest req) throws IOException {
+	public String fileUpload(@RequestParam("file") CommonsMultipartFile file,	HttpServletRequest req) throws IOException {
 		CreateDataDir();
 		String value = req.getParameter("select");
 		String reqpath = null;
 		switch (value) {
-		case "LED":			reqpath = "d:/devicemanage/temp/LED/";			break;
-		case "中央空调":		reqpath = "d:/devicemanage/temp/CAC/";			break;
-		case "热水":			reqpath = "d:/devicemanage/temp/WH/";			break;
+			case "LED":			reqpath = "d:/devicemanage/temp/LED/";			break;
+			case "中央空调":		reqpath = "d:/devicemanage/temp/CAC/";			break;
+			case "热水":			reqpath = "d:/devicemanage/temp/WH/";			break;
 		}
 		System.out.println(file.toString());
 		System.out.println(reqpath);
@@ -102,13 +101,6 @@ public class FileController {
 	}
 
 	public static void CreateDataDir() {
-		/*
-		 * default "d:/devicemanage/temp" is the root temperary directory;
-		 * "d:/devicemanage/handle" is the permanent directory; then in diretory
-		 * temp ,there are three directory name LED,WaterHeater,CAC, them are
-		 * temperary storage for the upload data.
-		 */
-		// rootpath
 		String basePath = "d:/devicemanage";
 		// temp path
 		String tempRootPath = "d:/devicemanage/temp";

@@ -5,7 +5,6 @@
 <jsp:directive.include file="/WEB-INF/sitemesh-decorators/include.jsp" />
 <html>
 <head>
-<title>文件上传成功</title>
 </head>
 <body>
        文件上传成功！

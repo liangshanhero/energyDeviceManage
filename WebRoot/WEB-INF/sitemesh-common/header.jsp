@@ -92,7 +92,7 @@
 			<div class="div3">
 				<ul>
 					<li><a class="a"
-						href="${pageContext.request.contextPath}/filehandler.jsp">数据上传</a></li>
+						href="${pageContext.request.contextPath}/fileIndex.jsp">数据上传</a></li>
 				</ul>
 			</div>
 

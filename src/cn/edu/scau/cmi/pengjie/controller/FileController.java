@@ -30,61 +30,36 @@ import cn.edu.scau.cmi.domain.Staff;
 
 import cn.edu.scau.cmi.domain.Project;
 
-@Controller("uploadFileController")
-public class uploadFileController {
+@Controller("FileController")
+public class FileController {
 
 	@Autowired
 	ProjectDAO projectDAO;
 
-	// 使用方法二上传文�?
+	// 使用方法二上传文件
 	@RequestMapping("/fileUpload")
-	public String fileUpload2(@RequestParam("file") CommonsMultipartFile file,
+	public String fileUpload(@RequestParam("file") CommonsMultipartFile file,
 			HttpServletRequest req) throws IOException {
-
 		CreateDataDir();
-		// 获取当前时间----
-		// String date=new
-		// SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
-		// String[] day=date.split("-");
-		// System.out.println(day[0]+day[1]+day[2]);
-		// //---------
-		// String dates=day[0]+day[1]+day[2];
-
 		String value = req.getParameter("select");
 		String reqpath = null;
 		switch (value) {
-		case "LED":
-			reqpath = "d:/devicemanage/temp/LED/";
-			break;
-		case "中央空调":
-			reqpath = "d:/devicemanage/temp/CAC/";
-			break;
-		case "热水":
-			reqpath = "d:/devicemanage/temp/WH/";
-			break;
+		case "LED":			reqpath = "d:/devicemanage/temp/LED/";			break;
+		case "中央空调":		reqpath = "d:/devicemanage/temp/CAC/";			break;
+		case "热水":			reqpath = "d:/devicemanage/temp/WH/";			break;
 		}
-
 		System.out.println(file.toString());
-
-		// recordFile(file);
-
 		System.out.println(reqpath);
-
 		long startTime = System.currentTimeMillis();
-
 		System.out.println("fileName? + file.getOriginalFilename()");
-
 		String path = reqpath + file.getOriginalFilename();
 		File newFile = new File(path);
 		// 通过CommonsMultipartFile的方法直接写文件（注意这个时候）
 		file.transferTo(newFile);
 		long endTime = System.currentTimeMillis();
-		System.out.println("方法二的运行时间�? + String.valueOf(endTime - startTime"
-				+ "ms");
-
+		System.out.println("方法二的运行时间 "+ String.valueOf(endTime - startTime) + "ms");
 		req.getSession().setAttribute("uploadMessage", "upload successfully");
-
-		return "/fileUpload.jsp";
+		return "../../fileHandler.jsp";
 	}
 
 	// 使用方法三上传文�?
